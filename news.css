@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-menu-header {
+  width: 100%;
+  height: auto;
+  padding: 20px 0 12px 0;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-about-menu-header {
+  width: 80%;
+  /* height: 90%; */
+}
+
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+  margin-bottom: 36px;
+}
+
+.page-title p {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffff;
+}
+
+.page-title img {
+  width: 5px;
+  height: 8px;
+}
+
+.projects-news {
+  width: 100%;
+  /* height: 622px; */
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-projects-news {
+  width: 80%;
+  /* height: 80%; */
+  margin-bottom: 40px;
+  padding: 80px 0 80px 0;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.container-projects-news img {
+  width: 12px;
+  height: 12px;
+  /* margin-bottom: 6px; */
+}
+
+.container-projects-news h1 {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  color: #062036;
+  margin-bottom: 24px;
+}
+
+.container-projects-news-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-news {
+  width: 30%;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 700px) {
+  .project-news {
+    width: 100%;
+  }
+}
+
+.project-news img {
+  width: 100%;
+  height: 210px;
+}
+
+.project-news-text {
+  background-color: #f8f8f8;
+  padding: 25px 5px;
+}
+
+.project-news-text a {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+.project-news-text a:hover {
+  text-decoration: underline;
+  color: rgb(130, 130, 255);
+}
+
+.project-news-date {
+  display: flex;
+  align-items: center;
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #2e2e2e;
+  margin-bottom: 12px;
+}
+
+.project-page-switcher {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 85px;
+}
+
+.container-project-page-switcher {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-project-page-switcher a {
+  text-decoration: none;
+  color: rgb(154, 154, 154);
+  margin-right: 15px;
+}
+
+.page-switcher-activee {
+  padding: 1px 5px;
+  color: #fff;
+  background-color: #062136;
+  border-radius: 4px;
+}
+
+.container-project-page-switcher button {
+  border: none;
+  background-color: #ffff;
+}

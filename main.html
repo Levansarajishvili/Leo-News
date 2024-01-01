@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
+    <script src="./jquery 3.6.0.js"></script>
+    <script src="./jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $("#tabs").tabs();
+      });
+    </script>
+</head>
+<body>
+
+    <div class="header_banner_container">
+        <p>საიტი მუშაობს სატესტო რეჟიმში!</p>
+    </div>
+
+   
+
+    <header class="site-header">
+        <div class="nav-utility-content">
+         
+         <nav class="nav-utility-content-menu">
+             <ul>
+                 <li>
+                 <a href="#" class="active">ჩვენ შესახებ</a>
+                 </li>
+                 
+                 <li>
+                     <a href="#">კონტაქტი</a>
+                 </li>
+             </ul>
+         </nav>
+         
+         <div class="lang">
+         <button id="lang-btn" onclick="changeDiv()">ქარ</button>
+         </div>
+ 
+         <div class="socials">
+             <a href="https://www.youtube.com/" target="_blank">
+                 <i class="fa-brands fa-youtube"></i>
+             </a>
+ 
+             <a href="https://www.facebook.com/" target="_blank">
+                 <i class="fa-brands fa-facebook-f"></i>
+             </a>
+ 
+             <a href="https://www.instagram.com/" target="_blank">
+                 <i class="fa-brands fa-instagram"></i>
+             </a>
+ 
+             <a href="https://twitter.com/" target="_blank">
+                 <i class="fa-brands fa-twitter"></i>
+             </a>
+ 
+         </div>
+         <button type="button" class="access-Btn">
+             <img src="./images/Frame 2022.png" alt="img not found">
+         </button>
+        
+     
+         </div>
+        </div>
+        <div class="secont-nav-utility-content">
+         <div class="logoandnamecontainer">
+          <h1>LEVAN NEWS</h1>
+        </div>
+         <nav>
+             <ul>
+                 <li>
+                     <a href="#">სიახლეები</a>
+                     <div class="newshid">
+                         <div class="news">
+                           <div class="conteiner">
+                             <div class="topic">სიახლეები/</div>
+                   
+                             <div class="menuItem">
+                               <div class="search">
+                                 <div class="containersearch">
+                                   <select name="article" id="article">
+                                     <option value="article">განცხადება</option>
+                                     <option value="article">ღონისძიება</option>
+                                     <option value="article">ანგარიშები</option>
+                                   </select>
+                                   <input type="text" placeholder="რას ეძებთ?" />
+                                   <button type="submit" id="search-btn">
+                                     <img src="./images/Question.png" alt="" />
+                                   </button>
+                                 </div>
+                               </div>
+                   
+                               <a href="#"> ახალი ამბები </a>
+                   
+                               <a href="#"> ვიდეო გალერეა </a>
+                   
+                               <a href="#"> ფოტო გალერეა </a>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                 </li>
+                 
+                 
+                 <li>
+                     <a href="#">მსოფლიო</a>
+                 </li>
+                 <li>
+                     <a href="#">რეგიონი</a>
+                 </li>
+                 
+                 <li>
+                     <a href="#">საქართველო</a>
+                 </li>
+             </ul>
+         </nav>
+ 
+         <button onclick="mySearchFunct()"><img src="./images/Question.png" alt=""></button>
+        </div>
+ 
+ 
+     <div class="access-overlay hidden">
+ 
+         <div class="head">
+             <h1>თავსებადობის მენიუ</h1>
+             <button class="close-btn"><img src="./images/close.png" alt="not found"></button>
+         </div>
+ 
+         <div class="access-menu">
+ 
+           <div class="button-voice">
+             <button><img src="./images/Voice.png" alt="not found"></button>
+             <p>ხმოვანი რეჟიმი</p>
+           </div>
+           
+           <div class="button-voice">
+             <button><img src="./images/font.png" alt="not found"></button>
+             <p>შრიფტი</p>
+           </div>
+ 
+           <div class="button-voice">
+             <button><img src="./images/Contrast.png" alt="not found"></button>
+             <p>კონტრასტი</p>
+           </div>
+ 
+           <div class="button-voice">
+             <button><img src="./images/Location.png" alt="not found"></button>
+             <p>განლაგება</p>
+           </div>
+ 
+           <div class="button-other" >
+             <button><img src="./images/reload.png" alt="not found"></button>
+             <p>კონტრასტი</p>
+           </div>
+ 
+         </div>
+        
+     </div>
+
+     <div class="searchforhid" id="searchFoor">
+      <div class="searchfor">
+        <div class="container-searchfor">
+          <div class="menuItem">
+            <input type="text" placeholder="შეიყვანეთ საძიებო სიტყვა" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+     </header>
+
+     <div class="mobile-tabletheader">
+      <div class="container-mobile-tabletheader">
+          <button onclick="mobMenuFunct()">
+            <img src="./images/burger-menu.PNG" alt="not">
+          </button>
+      
+      <div class="mobile-tabletheader-logoname">
+        <h1>LEVAN NEWS</h1>
+      </div>
+
+      
+      
+      <button onclick="mobSearchFunct()">
+        <img src="./images/Question.png" alt="not">
+      </button>    
+      </div>
+
+      <div class="mobSearchforhid" id="mobSearchFoor">
+        <div class="mobsearchfor">
+          <div class="container-mobsearchfor">
+            <div class="menuItem">
+              <input type="text" placeholder="შეიყვანეთ საძიებო სიტყვა" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobilemenuhid" id="mobileMenu">
+        <div class="mobilemenu">
+          <div class="container-mobilemenu">
+            <div class="menuItem">
+              <a href="#"> ჩვენ შესახებ </a>
+              
+              <a href="#"> სიახლეები </a>
+  
+              <a href="#"> მსოფლიო </a>
+  
+              <a href="#"> რეგიონი </a>
+  
+              <a href="#"> საქართველო </a>
+  
+              <a href="#"> კონტაქტი </a>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+   
+   <button onclick="topFunction()" id="myTopScrollBtn" title="Go to top"><img src="./images/scrollTop.png" alt="not found"></button>
+   <main>
+     <section class="coverabout">
+      <div class="coverabout-text">
+        <div class="coverabout-date">
+            <div class="date-line"></div>
+            10 ივლისი, 2023
+        </div>
+
+        <h1>ქარის ელექტროსადგურების მშენებლობა დაიწყო</h1>
+        <p>ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად. გათხრები შესანახ აგრძნობინებდა რედაქტორები გაიყო მოგაქვს გაჰყინა.</p>
+        <a href="#">ვრცლად <img src="./images/arrow.png" alt="not found"></a>
+
+        
+      </div>
+     </section>
+
+     <section class="main-news">
+        <div class="container-main-news">
+            <div>
+            </div>
+            <div><h1>სიახლეები</h1></div>
+            <div class="news-head-line"></div>
+
+            <div class="container-main-news-grid">
+
+                <div class="main-grid-news">
+                   <div class="main-grid-news-date">
+                    <div class="main-grid-news-date-line"></div>
+                    10 ივლისი, 2023
+                   </div> 
+                   <h1><a href="#">შშმ პირთა უფლებების დაცვის დღესთან დაკავშირებით</a></h1>
+                   <p>ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად. გათხრები შესანახ აგრძნობინებდა რედაქტორები გაიყო მოგაქვს გაჰყინა.</p>
+                </div>
+
+                <div class="main-grid-news">
+                    <div class="main-grid-news-date">
+                     <div class="main-grid-news-date-line"></div>
+                     10 ივლისი, 2023
+                    </div> 
+                    <h1><a href="#">შშმ პირთა უფლებების დაცვის დღესთან დაკავშირებით</a></h1>
+                    <p>ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად. გათხრები შესანახ აგრძნობინებდა რედაქტორები გაიყო მოგაქვს გაჰყინა.</p>
+                 </div>
+
+                 <div class="main-grid-news">
+                    <div class="main-grid-news-date">
+                     <div class="main-grid-news-date-line"></div>
+                     10 ივლისი, 2023
+                    </div> 
+                    <h1><a href="#">შშმ პირთა უფლებების დაცვის დღესთან დაკავშირებით</a></h1>
+                    <p>ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად. გათხრები შესანახ აგრძნობინებდა რედაქტორები გაიყო მოგაქვს გაჰყინა.</p>
+                 </div>
+            </div>
+        </div>
+     </section>
+
+     <section class="subscribe-news">
+        <div class="container-subscribe-news">
+            <div class="subscribe-news-title">გამოიწერე სიახლეები</div>
+            
+            <button type="submit">გამოწერა</button>
+            
+            <div class="subscribe-news-socials">
+                <a href="https://www.youtube.com/" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+    
+                <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+    
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    
+                <a href="https://twitter.com/" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+    
+            </div>
+          </div>
+     </section>
+
+     <section class="foreign-policy">
+        <div class="container-foreign-policy">
+            <h1>ჯანმრთელობა და ჯანსაღი ცხოვრების წესი.</h1>
+            
+            <div class="foreign-policy-imagetext">
+                <img src="./images/walking.png" alt="not found">
+                
+                <div class="foreign-policy-text">
+                <h1> სწრაფი სიარული </h1>
+                <p>ლორემ იპსუმ სკოლად გავსწირე დაიშურა.</p>
+                <a href="#">ვრცლად <img src="./images/arrow.png" alt="not found"></a>
+               </div>
+
+            </div>
+        </div>
+     </section>
+
+     <section class="other-countries">
+        <div class="container-other-countries">
+           <div class="other-countries-header">
+            <div class="country-globe">
+                <img src="./images/country.png" alt="not found">
+                <h1>ქვეყნები</h1>
+            </div>
+            <a href="#">ყველა ქვეყნის ნახვა</a>
+           </div>
+           
+           <div class="other-countries-list">
+
+             <a href="#">
+                <img src="./images/Sudanflag.PNG" alt="not found">
+                სუდანი
+             </a>
+
+             <a href="#">
+                <img src="images/Japanflag.PNG" alt="not found">
+                იაპონია
+             </a>
+
+             <a href="#">
+                <img src="./images/Vietnamflag.PNG" alt="not found">
+                ვიეტნამი
+             </a>
+           </div>   
+
+           <div class="other-countries-body">
+
+            <div class="other-countries-body-image">
+                <img src="./images/statementby.png" alt="not found">
+                
+                    <div class="other-countries-body-date">
+                        <div class="date-line"></div>
+                        26 აპრილი, 2023
+                    </div>
+                    <a href="#">შეხვედრა საერთაშორისო ფონდის (IFES) დირექტორის მოადგილესთან</a>
+            </div>
+
+            <div class="other-countries-body-infolist">
+                <div class="other-countries-body-infolist-grid">
+
+                    <div class="infolist-grid-news">
+                        <div class="infolist-grid-news-date">
+                         <div class="infolist-date-line"></div>
+                         26 აპრილი, 2023
+                        </div> 
+                        <a href="#">პოლიტიკური ფინანსების მონიტორინგი</a>
+                     </div>
+
+                     <div class="infolist-grid-news">
+                        <div class="infolist-grid-news-date">
+                         <div class="infolist-date-line"></div>
+                         26 აპრილი, 2023
+                        </div> 
+                        <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                     </div>
+
+                     <div class="infolist-grid-news">
+                        <div class="infolist-grid-news-date">
+                         <div class="infolist-date-line"></div>
+                         26 აპრილი, 2023
+                        </div> 
+                        <a href="#">შეხვედრა საერთაშორისო ფონდის (IFES) დირექტორის მოადგილესთან</a>
+                     </div>
+
+                </div>
+            </div>
+           
+        </div>
+        </div>
+     </section>
+     
+     <section class="ukraine-case">
+        <div class="container-ukraine-case">
+            
+            <div class="ukraine-case-text">
+                <div style="display: flex; justify-content: space-between; width: 170px; margin-bottom: 24px;">
+                <img src="./images/Ukraineflag.PNG" alt="not found" style="width: 32px; height: 24px;">
+                <h1>უკრაინა</h1>
+                </div>
+                <p>ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა გავამხნევებ ამიბამს ეშმაკობა სიძულვილით ტაუერდან ავიწყებს ნაცად წამოიღო ვირთაგვებმა. ვიგულვოთ სიხარულს სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად. გათხრები შესანახ აგრძნობინებდა რედაქტორები გაიყო მოგაქვს გაჰყინა.</p>
+            </div>
+            
+            <div class="ukraine-case-video">
+                <iframe width="500px" height="272px" src="https://www.youtube.com/embed/4v6qGscEcAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+     </section>
+     
+     <section class="policy-issues">
+            <div class="container-policy-issues">
+                <div>
+                </div>
+                <div><h1>გლობალური პოლიტიკის საკითხები</h1></div>
+                <div class="news-head-line"></div>
+    
+            
+                <div class="container-policy-issues-grid">
+                   <div class="policy-issues-grid-header">
+                    <div id="tabs">
+                    <ul >
+
+                        <li><a href="#tabs-1">
+                            ლტოლვილები და ჰუმანიტარული დახმარება 
+                        </a></li>
+
+                        <li><a href="#tabs-2">
+                            კლიმატი და გარემო
+                        </a></li>
+
+                        <li><a href="#tabs-3">
+                            გლობალური ჯანმრთელობა 
+                        </a></li>
+                    </ul>
+                   
+
+                   <div class="policy-issues-grid-body" id="tabs-1">
+                    <div class="policy-issues-grid-img">
+                        <img src="./images/policyissue.png" alt="not found">
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 26 აპრილი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-issues-grid-newslist">
+
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 26 აპრილი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 26 აპრილი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 26 აპრილი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="policy-issues-grid-body" id="tabs-2">
+                    <div class="policy-issues-grid-img">
+                        <img src="./images/official1.png" alt="not found">
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 27 აპრილი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-issues-grid-newslist">
+
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 27 აპრილი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 27 აპრილი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 27 აპრილი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+                    </div>
+                   </div>
+                   <div class="policy-issues-grid-body" id="tabs-3">
+                    <div class="policy-issues-grid-img">
+                        <img src="./images/official2.png" alt="not found">
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 10 აპრილი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="policy-issues-grid-newslist">
+
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 10 ივლისი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 10 ივლისი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+
+                        <div class="policy-issues-grid-news">
+                            <div class="policy-grid-news">
+                                <div class="policy-grid-news-date">
+                                 <div class="policy-date-line"></div>
+                                 10 ივლისი, 2023
+                                </div> 
+                                <a href="#">ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს.</a>
+                             </div>
+                        </div>
+                    </div>
+                   </div>
+                   </div>
+                </div>
+            </div>
+
+            <section class="questions">
+
+              <div class="section-center">
+                <!-- single question -->
+        
+                <article class="question">
+                  <div class="question-title">
+                    <a href="#">ლტოლვილები და ჰუმანიტარული დახმარება </a>
+                    <button type="button" class="question-btn">
+                      <span class="plus-icon">
+                        <i class="fa-regular fa-square-plus"></i>
+                      </span>
+                      <span class="minus-icon">
+                        <i class="fa-regular fa-square-minus"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="question-text">
+                    <img src="./images/official1.png" alt="" />
+        
+                    <div class="policy-grid-news-date-container">
+                      <div class="policy-grid-news-date">
+                        <div class="policy-date-line"></div>
+                        10 ივლისი, 2023
+                      </div>
+        
+                      <a href="#"
+                        >ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად.</a
+                      >
+                    </div>
+        
+                    <div class="policy-grid-news-date-container">
+                      <div class="policy-grid-news-date">
+                        <div class="policy-date-line"></div>
+                        10 ივლისი, 2023
+                      </div>
+        
+                      <a href="#"
+                        >ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად.</a
+                      >
+                    </div>
+        
+                    <div class="policy-grid-news-date-container">
+                      <div class="policy-grid-news-date">
+                        <div class="policy-date-line"></div>
+                        10 ივლისი, 2023
+                      </div>
+        
+                      <a href="#"
+                        >ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად.</a
+                      >
+                    </div>
+                  </div>
+                </article>
+        
+                <!-- end single question -->
+        
+                <!-- single question -->
+                <article class="question">
+                  <div class="question-title">
+                    <a href="#">კლიმატი და გარემო</a>
+                    <button type="button" class="question-btn">
+                      <span class="plus-icon">
+                        <i class="fa-regular fa-square-plus"></i>
+                      </span>
+                      <span class="minus-icon">
+                        <i class="fa-regular fa-square-minus"></i>
+                      </span>
+                    </button>
+                  </div>
+        
+                  <div class="question-text">
+                    <img src="./images/official2.png" alt="" />
+        
+                    <div class="policy-grid-news-date-container">
+                      <div class="policy-grid-news-date">
+                        <div class="policy-date-line"></div>
+                        10 ივლისი, 2023
+                      </div>
+        
+                      <a href="#"
+                        >ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად.</a
+                      >
+                    </div>
+        
+                    <div class="policy-grid-news-date-container">
+                      <div class="policy-grid-news-date">
+                        <div class="policy-date-line"></div>
+                        10 ივლისი, 2023
+                      </div>
+        
+                      <a href="#"
+                        >ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად.</a
+                      >
+                    </div>
+        
+                    <div class="policy-grid-news-date-container">
+                      <div class="policy-grid-news-date">
+                        <div class="policy-date-line"></div>
+                        10 ივლისი, 2023
+                      </div>
+        
+                      <a href="#"
+                        >ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად.</a
+                      >
+                    </div>
+                  </div>
+                </article>
+        
+                <!-- end single question -->
+        
+                <!-- single question -->
+                <article class="question">
+                  <div class="question-title">
+                    <a href="#">გლობალური ჯანმრთელობა</a>
+                    <button type="button" class="question-btn">
+                      <span class="plus-icon">
+                        <i class="fa-regular fa-square-plus"></i>
+                      </span>
+                      <span class="minus-icon">
+                        <i class="fa-regular fa-square-minus"></i>
+                      </span>
+                    </button>
+                  </div>
+        
+                  <div class="question-text">
+                    <img src="./images/policyissue.png" alt="" />
+        
+                    <div class="policy-grid-news-date-container">
+                      <div class="policy-grid-news-date">
+                        <div class="policy-date-line"></div>
+                        10 ივლისი, 2023
+                      </div>
+        
+                      <a href="#"
+                        >ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად.</a
+                      >
+                    </div>
+        
+                    <div class="policy-grid-news-date-container">
+                      <div class="policy-grid-news-date">
+                        <div class="policy-date-line"></div>
+                        10 ივლისი, 2023
+                      </div>
+        
+                      <a href="#"
+                        >ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად.</a
+                      >
+                    </div>
+        
+                    <div class="policy-grid-news-date-container">
+                      <div class="policy-grid-news-date">
+                        <div class="policy-date-line"></div>
+                        10 ივლისი, 2023
+                      </div>
+        
+                      <a href="#"
+                        >ლორემ იპსუმ სკოლად გავსწირე დაიშურა ფულსაც პირუტყვს ლუარსაბიცა სისულელისაგან მოგაქვს მოქუფრულიყო სიძულვილით აგრძნობინებდა სკოლად.</a
+                      >
+                    </div>
+                  </div>
+                </article>
+        
+                <!-- end single question -->
+              </div>
+            </section>
+     </section>
+
+     <section class="learnmore">
+      <div class="container-learnmore">
+        <h1>გაიგე მეტი</h1>
+
+        <div class="learnmore-grid-container">
+          
+          <div class="learnmore-news">
+            <img src="./images/policyissue.png" alt="not">
+            <div class="learnmore-news-text">
+              <p>10.07.2023</p>
+              <h2><a href="#">ლორემ იპსუმ დემონსტრანტებმა მარაზმად შესულიყავით, მუზარადს.</a></h2>
+            </div>
+          </div> 
+
+          <div class="learnmore-news">
+            <img src="./images/policyissue.png" alt="not">
+            <div class="learnmore-news-text">
+              <p>10.07.2023</p>
+              <h2><a href="#">ლორემ იპსუმ დემონსტრანტებმა მარაზმად შესულიყავით, მუზარადს.</a></h2>
+            </div>
+          </div> 
+
+          <div class="learnmore-news">
+            <img src="./images/policyissue.png" alt="not">
+            <div class="learnmore-news-text">
+              <p>10.07.2023</p>
+              <h2><a href="">ლორემ იპსუმ დემონსტრანტებმა მარაზმად შესულიყავით, მუზარადს.</a></h2>
+            </div>
+          </div> 
+
+        </div>
+      </div>
+     </section>
+   </main>
+
+    <footer class="site-footer">
+        <div class="footer-primary-wrapper">
+         
+        <div class="logoname"> 
+         <h1>Levan News</h1>
+        </div> 
+         
+         <nav>
+            <ul>
+                <li><a href="#">სიახლეები</a></li>
+                <li><a href="#">კონტაქტი</a></li>
+                <li><a href="#">ხდკ</a></li>
+                <!-- <li><a href="#">ხდკ</a></li> -->
+            </ul>
+        </nav>
+        </div>
+        
+        <div class="footer-secondary-wrapper">
+            <h1>გამოიწერე სიახლეები</h1>
+            <div class="socials">
+                <a href="https://www.youtube.com/" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+    
+                <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+    
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+    
+                <a href="https://twitter.com/" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+
+            <span>&copy; შპს "LEO Studio", 2023, ყველა უფლება დაცულია.</span>
+
+        </div>
+    </footer>
+
+    <div class="mobile-tabletfooter">
+       <div class="container-mobile-tabletfooter">
+        <div class="mobile-tabletfooter-logoname">
+          <h1>LEVAN NEWS</h1>
+        </div>
+
+        <div class="mobile-tabletfooter-firstnav">
+          <ul>
+            <li><a href="#">სიახლეები</a></li>
+            <li><a href="#">კონტაქტი</a></li>
+            <li><a href="#">ხდკ</a></li>
+            <!-- <li><a href="#">ხდკ</a></li> -->
+          </ul>
+        </div>
+
+        <div class="mobile-tabletfooter-socials">
+          <a href="https://www.youtube.com/" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://twitter.com/" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+
+        </div>
+   
+        <div class="mobile-tabletfooter-secondnav">
+          
+          <span>&copy; შპს "LEO Studio", 2023, ყველა უფლება დაცულია.</span>
+          
+        </div>
+       </div>
+    </div>
+
+    <script src="./topscroll.js"></script>
+    <script src="./app.js"></script>
+    <script src="./apppolicy.js"></script>
+</body>
+</html>

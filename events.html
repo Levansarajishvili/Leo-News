@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./events.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="header_banner_container">
+        <p>საიტი მუშაობს სატესტო რეჟიმში!</p>
+    </div>
+
+    <header class="site-header">
+      <div class="nav-utility-content">
+       
+       <nav class="nav-utility-content-menu">
+           <ul>
+               <li>
+               <a href="#" class="active">ჩვენ შესახებ</a>
+               </li>
+               
+               <li>
+                   <a href="#">კონტაქტი</a>
+               </li>
+           </ul>
+       </nav>
+       
+       <div class="lang">
+       <button id="lang-btn" onclick="changeDiv()">ქარ</button>
+       </div>
+
+       <div class="socials">
+           <a href="https://www.youtube.com/" target="_blank">
+               <i class="fa-brands fa-youtube"></i>
+           </a>
+
+           <a href="https://www.facebook.com/" target="_blank">
+               <i class="fa-brands fa-facebook-f"></i>
+           </a>
+
+           <a href="https://www.instagram.com/" target="_blank">
+               <i class="fa-brands fa-instagram"></i>
+           </a>
+
+           <a href="https://twitter.com/" target="_blank">
+               <i class="fa-brands fa-twitter"></i>
+           </a>
+
+       </div>
+       <button type="button" class="access-Btn">
+           <img src="./images/Frame 2022.png" alt="img not found">
+       </button>
+      
+   
+       </div>
+      </div>
+      <div class="secont-nav-utility-content">
+       <div class="logoandnamecontainer">
+        <h1>LEVAN NEWS</h1>
+      </div>
+       <nav>
+           <ul>
+               <li>
+                   <a href="#">სიახლეები</a>
+                   <div class="newshid">
+                       <div class="news">
+                         <div class="conteiner">
+                           <div class="topic">სიახლეები/</div>
+                 
+                           <div class="menuItem">
+                             <div class="search">
+                               <div class="containersearch">
+                                 <select name="article" id="article">
+                                   <option value="article">განცხადება</option>
+                                   <option value="article">ღონისძიება</option>
+                                   <option value="article">ანგარიშები</option>
+                                 </select>
+                                 <input type="text" placeholder="რას ეძებთ?" />
+                                 <button type="submit" id="search-btn">
+                                   <img src="./images/Question.png" alt="" />
+                                 </button>
+                               </div>
+                             </div>
+                 
+                             <a href="#"> ახალი ამბები </a>
+                 
+                             <a href="#"> ვიდეო გალერეა </a>
+                 
+                             <a href="#"> ფოტო გალერეა </a>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+               </li>
+               
+               
+               <li>
+                   <a href="#">მსოფლიო</a>
+               </li>
+               <li>
+                   <a href="#">რეგიონი</a>
+               </li>
+               
+               <li>
+                   <a href="#">საქართველო</a>
+               </li>
+           </ul>
+       </nav>
+
+       <button onclick="mySearchFunct()"><img src="./images/Question.png" alt=""></button>
+      </div>
+
+
+   <div class="access-overlay hidden">
+
+       <div class="head">
+           <h1>თავსებადობის მენიუ</h1>
+           <button class="close-btn"><img src="./images/close.png" alt="not found"></button>
+       </div>
+
+       <div class="access-menu">
+
+         <div class="button-voice">
+           <button><img src="./images/Voice.png" alt="not found"></button>
+           <p>ხმოვანი რეჟიმი</p>
+         </div>
+         
+         <div class="button-voice">
+           <button><img src="./images/font.png" alt="not found"></button>
+           <p>შრიფტი</p>
+         </div>
+
+         <div class="button-voice">
+           <button><img src="./images/Contrast.png" alt="not found"></button>
+           <p>კონტრასტი</p>
+         </div>
+
+         <div class="button-voice">
+           <button><img src="./images/Location.png" alt="not found"></button>
+           <p>განლაგება</p>
+         </div>
+
+         <div class="button-other" >
+           <button><img src="./images/reload.png" alt="not found"></button>
+           <p>კონტრასტი</p>
+         </div>
+
+       </div>
+      
+   </div>
+
+   <div class="searchforhid" id="searchFoor">
+    <div class="searchfor">
+      <div class="container-searchfor">
+        <div class="menuItem">
+          <input type="text" placeholder="შეიყვანეთ საძიებო სიტყვა" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+   </header>
+
+   <div class="mobile-tabletheader">
+    <div class="container-mobile-tabletheader">
+        <button onclick="mobMenuFunct()">
+          <img src="./images/burger-menu.PNG" alt="not">
+        </button>
+    
+    <div class="mobile-tabletheader-logoname">
+      <h1>LEVAN NEWS</h1>
+    </div>
+
+    
+    
+    <button onclick="mobSearchFunct()">
+      <img src="./images/Question.png" alt="not">
+    </button>    
+    </div>
+
+    <div class="mobSearchforhid" id="mobSearchFoor">
+      <div class="mobsearchfor">
+        <div class="container-mobsearchfor">
+          <div class="menuItem">
+            <input type="text" placeholder="შეიყვანეთ საძიებო სიტყვა" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobilemenuhid" id="mobileMenu">
+      <div class="mobilemenu">
+        <div class="container-mobilemenu">
+          <div class="menuItem">
+            <a href="#"> ჩვენ შესახებ </a>
+            
+            <a href="#"> სიახლეები </a>
+
+            <a href="#"> მსოფლიო </a>
+
+            <a href="#"> რეგიონი </a>
+
+            <a href="#"> საქართველო </a>
+
+            <a href="#"> კონტაქტი </a>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+ <button onclick="topFunction()" id="myTopScrollBtn" title="Go to top"><img src="./images/scrollTop.png" alt="not found"></button>
+    <main>
+       <div class="about-menu-header">
+        <div class="container-about-menu-header">
+            <div class="page-title">
+                <p>მთავარი</p>
+                <img src="./images/Vector.png" alt="not">
+                <p>სტატიები</p>
+            </div>
+
+        </div> 
+       </div>
+       
+       
+
+       <div class="news-page-news">
+        <div class="container-news-page-news">
+          <div class="news-page-list">
+            <h1>სტატიები</h1>
+            
+            <div class="news-page-list-flex">
+
+              <div class="event-news">
+                <h2>ლორემ იპსუმ გულუხვობით ჰშობავს სანაძლევო სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა.</h2>
+                <p>ლორემ იპსუმ გულუხვობით ჰშობავს სანაძლევო სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა იქორწინების სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა იქორწინების.... <a href="#">მეტის ნახვა</a> </p>
+                <h6>21.03.2023</h6> 
+              </div>
+              
+              <div class="event-news">
+                <h2>ლორემ იპსუმ გულუხვობით ჰშობავს სანაძლევო სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა.</h2>
+                <p>ლორემ იპსუმ გულუხვობით ჰშობავს სანაძლევო სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა იქორწინების სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა იქორწინების. ლორემ იპსუმ გულუხვობით ჰშობავს სანაძლევო სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა იქორწინების სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა იქორწინების..... <a href="#">ნაკლების ნახვა</a></p>
+                <h6>21.03.2023</h6> 
+              </div>
+
+              <div class="event-news">
+                <h2>ლორემ იპსუმ გულუხვობით ჰშობავს სანაძლევო სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა.</h2>
+                <p>გაცნობითი ხასიათის შეხვედრაზე რაჟდენ კუპრაშვილმა ასოციაციის თავმჯდომარეს ბიუროს სამუშაო სტრატეგია, ძირითადი მიმართულებები და გეგმები გააცნო. ასევე, შეხვედრაზე ერთობლივი ღონისძიებების განხორციელება დაიგეგმა... <a href="#">მეტის ნახვა</a> </p>
+                <h6>21.03.2023</h6> 
+              </div>
+
+              <div class="event-news">
+                <h2>ლორემ იპსუმ გულუხვობით ჰშობავს სანაძლევო სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა.</h2>
+                <p>ლორემ იპსუმ გულუხვობით ჰშობავს სანაძლევო სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა იქორწინების სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა იქორწინების.... <a href="#">მეტის ნახვა</a> </p>
+                <h6>21.03.2023</h6> 
+              </div>
+
+              <div class="event-news">
+                <h2>ლორემ იპსუმ გულუხვობით ჰშობავს სანაძლევო სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა.</h2>
+                <p>ლორემ იპსუმ გულუხვობით ჰშობავს სანაძლევო სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა იქორწინების სუპერხარისხიანი მათხოვრობის გგითხარი მიმზიდველ ცეკამ ესახელებინათ, დაგვემართა იქორწინების.... <a href="#">მეტის ნახვა</a> </p>
+                <h6>21.03.2023</h6> 
+              </div>
+            </div>
+          </div>
+
+          <div class="wrapper">
+            <div class="wrapper-container">
+              <h1>კალენდარი</h1>
+
+              <div class="header">
+                <p class="current-date">July 2023</p>
+                <input type="text" placeholder="ყველა" />
+                <div class="icons">
+                  <span id="prev" class="material-symbols-rounded"
+                    ><i class="fa-solid fa-chevron-left"></i></span>
+                  <span id="next" class="material-symbols-rounded"
+                    ><i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+              </div>
+        
+              <div class="calendar">
+                <ul class="weeks">
+                  <li>კვ</li>
+                  <li>ორ</li>
+                  <li>სამ</li>
+                  <li>ოთხ</li>
+                  <li>ხუთ</li>
+                  <li>პარ</li>
+                  <li>შაბ</li>
+                </ul>
+                <ul class="days"></ul>
+              </div>
+          </div>
+       </div>
+      </div>
+    </div>
+
+      <div class="project-page-switcher">
+
+        <div class="container-project-page-switcher">
+        <button><img src="./images/arrow-prev.png" alt=""></button>
+        <a href="#" class="page-switcher-activee">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <span>...</span>
+        <a href="#">10</a>
+        <button><img src="./images/arrow-next.png" alt=""></button>
+      </div>
+      
+      </div>
+    </main>
+   
+
+    <footer class="site-footer">
+      <div class="footer-primary-wrapper">
+       
+      <div class="logoname"> 
+       <h1>Levan News</h1>
+      </div> 
+       
+       <nav>
+          <ul>
+              <li><a href="#">სიახლეები</a></li>
+              <li><a href="#">კონტაქტი</a></li>
+              <li><a href="#">ხდკ</a></li>
+              <!-- <li><a href="#">ხდკ</a></li> -->
+          </ul>
+      </nav>
+      </div>
+      
+      <div class="footer-secondary-wrapper">
+          <h1>გამოიწერე სიახლეები</h1>
+          <div class="socials">
+              <a href="https://www.youtube.com/" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+              </a>
+  
+              <a href="https://www.facebook.com/" target="_blank">
+                  <i class="fa-brands fa-facebook-f"></i>
+              </a>
+  
+              <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+              </a>
+  
+              <a href="https://twitter.com/" target="_blank">
+                  <i class="fa-brands fa-twitter"></i>
+              </a>
+          </div>
+
+          <span>&copy; შპს "LEO Studio", 2023, ყველა უფლება დაცულია.</span>
+
+      </div>
+  </footer>
+
+  <div class="mobile-tabletfooter">
+     <div class="container-mobile-tabletfooter">
+      <div class="mobile-tabletfooter-logoname">
+        <h1>LEVAN NEWS</h1>
+      </div>
+
+      <div class="mobile-tabletfooter-firstnav">
+        <ul>
+          <li><a href="#">სიახლეები</a></li>
+          <li><a href="#">კონტაქტი</a></li>
+          <li><a href="#">ხდკ</a></li>
+          <!-- <li><a href="#">ხდკ</a></li> -->
+        </ul>
+      </div>
+
+      <div class="mobile-tabletfooter-socials">
+        <a href="https://www.youtube.com/" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+      </a>
+
+      <a href="https://www.facebook.com/" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="https://www.instagram.com/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://twitter.com/" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+      </a>
+
+      </div>
+ 
+      <div class="mobile-tabletfooter-secondnav">
+        
+        <span>&copy; შპს "LEO Studio", 2023, ყველა უფლება დაცულია.</span>
+        
+      </div>
+     </div>
+  </div>
+
+  <script src="./topscroll.js"></script> 
+  <script src="./apppolicy.js"></script>
+    <script src="./app.js"></script>
+    <script src="./calendar.js"></script>
+</body>
+</html>
