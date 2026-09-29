@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.notfound-main {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-img {
+  position: absolute;
+  opacity: 20%;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container-notfound-main {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-notfound-main span {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 88px;
+  color: #2e2e2e;
+  margin-bottom: 20px;
+}
+
+.container-notfound-main p {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2e2e2e;
+  margin-bottom: 27px;
+}
+
+.container-notfound-main a {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  padding: 7px 20px;
+  background-color: #c1a783;
+  color: #2e2e2e;
+  margin-bottom: 27px;
+}

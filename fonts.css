@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "notosansGeorgia";
+  src: url("fonts/NotoSansGeorgian-Regular.eot");
+  src: local("fonts/Noto Sans Georgian Regular"),
+    local("NotoSansGeorgian-Regular"),
+    url("fonts/NotoSansGeorgian-Regular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/NotoSansGeorgian-Regular.woff2") format("woff2"),
+    url("fonts/NotoSansGeorgian-Regular.woff") format("woff"),
+    url("fonts/NotoSansGeorgian-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

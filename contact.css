@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-menu-header {
+  width: 100%;
+  height: auto;
+  padding: 40px 0 0 0;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-about-menu-header {
+  width: 80%;
+  /* height: 90%; */
+}
+
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  margin-bottom: 36px;
+}
+
+.page-title p {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+}
+
+.page-title img {
+  width: 5px;
+  height: 8px;
+}
+
+.about-menu-header-title {
+  border-left: 1px solid #ffff;
+  margin-left: 170px;
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .about-menu-header-title {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about-menu-header-title {
+    margin-left: 70px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-menu-header-title {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .about-menu-header-title {
+    margin-left: 30px;
+  }
+}
+
+.about-menu-header-title h1 {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: #ffff;
+  margin: 16px 0;
+}
+
+.contact-body {
+  width: 100%;
+  height: 684px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-body {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.container-contact-body {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 30px; */
+  margin-bottom: 40px;
+  padding: 40px 5% 40px 5%;
+  /* border-top: 1px solid rgba(165, 165, 165, 0.478); */
+}
+
+@media screen and (max-width: 900px) {
+  .container-contact-body {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact-body-map {
+  width: 40%;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-body-map {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contact-body-form {
+  width: 40%;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-body-form {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+.contact-body-map p {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #2e2e2e;
+}
+
+.contact-body-form h1 {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 12px;
+  color: #2e2e2e;
+  margin-bottom: 24px;
+}
+
+.contact-body-form-hint {
+  font-family: notosansGeorgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #474747;
+  background-color: #f4f3f3;
+  padding: 10px 30px 10px 30px;
+  margin-bottom: 24px;
+}
+
+.contact-body-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-body-form form input {
+  padding: 15px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(182, 182, 182, 0.477);
+}
+
+.contact-body-form form textarea {
+  height: 120px;
+  padding: 15px;
+  resize: none;
+  margin-bottom: 18px;
+  border: 1px solid rgba(182, 182, 182, 0.477);
+}
