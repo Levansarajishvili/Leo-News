@@ -917,21 +917,22 @@ header {
 
 
 
-/* access  */
+/* access — თავსებადობის მენიუ */
 
 .access-overlay {
   width: 352px;
-  height: 290px;
   transform: translateY(-65px);
   position: relative;
   left: 68%;
+  z-index: 20;
   border-radius: 12px;
   border: 1px solid #e3e3e3;
   background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(13, 58, 20, 0.18);
 }
 
 .access-overlay .head {
-  width: 352px;
+  width: 100%;
   height: 39px;
   border-radius: 12px 12px 0 0;
   background-color: green;
@@ -941,7 +942,7 @@ header {
   padding: 10px 16px;
 }
 
-.access-overlay .head h1 {
+.access-overlay .head h2 {
   font-family: notosansGeorgia;
   font-style: normal;
   font-weight: 400;
@@ -952,69 +953,172 @@ header {
 }
 
 .access-overlay .head button {
-  width: 12px;
-  height: 12px;
+  display: flex;
   border: none;
   background-color: green;
   cursor: pointer;
+  padding: 4px;
+}
+
+.access-overlay .head button img {
+  width: 12px;
+  height: 12px;
 }
 
 .access-menu {
   display: grid;
-  grid-template-columns: auto auto;
-  margin: 15px;
+  grid-template-columns: 1fr 1fr;
+  margin: 15px 15px 8px;
 }
 
-.button-voice {
-  border: 1px solid #e3e3e3;
-  text-align: center;
+.access-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   height: 70px;
-}
-
-.button-voice button {
-  border: none;
-  background-color: #ffff;
-}
-
-.button-voice button img {
-  width: 22px;
-  height: 19px;
-  color: #171717;
-}
-
-.button-voice p {
+  border: 1px solid #e3e3e3;
+  background-color: #ffffff;
   font-family: notosansGeorgia;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #2e2e2e;
   line-height: 19px;
+  color: #2e2e2e;
+  cursor: pointer;
 }
 
-.button-other {
-  border: 1px solid #e3e3e3;
-  text-align: center;
-  height: 70px;
-}
-
-.button-other button {
-  border: none;
-  background-color: #ffff;
-}
-
-.button-other button img {
+.access-option img {
   width: 22px;
   height: 19px;
-  color: #171717;
+  object-fit: contain;
 }
 
-.button-other p {
+/* გასუფთავება — მთელ სიგანეზე, ცარიელი უჯრის ნაცვლად */
+.access-option[data-action="reset"] {
+  grid-column: 1 / -1;
+}
+
+.access-option:hover {
+  background-color: var(--tint);
+}
+
+.access-option:focus-visible,
+.access-overlay .head button:focus-visible,
+.access-Btn:focus-visible {
+  outline: 2px solid var(--green-900);
+  outline-offset: -3px;
+}
+
+/* ჩართული რეჟიმი */
+.access-option[aria-pressed="true"] {
+  background-color: green;
+  border-color: green;
+  color: #ffffff;
+}
+
+.access-option[aria-pressed="true"] img {
+  filter: invert(1);
+}
+
+.access-status {
+  min-height: 16px;
+  margin: 0 15px 12px;
   font-family: notosansGeorgia;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: #2e2e2e;
-  line-height: 19px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--green-900);
+}
+
+/* ---------- რეჟიმები (კლასი <html>-ზე, accessibility.js) ---------- */
+
+/* შრიფტი: მთელი გვერდი პროპორციულად იზრდება, ფიქსირებული სიმაღლის ბლოკებში ტექსტი არ იჭრება */
+html.a11y-font body {
+  zoom: var(--a11y-zoom);
+}
+
+/* კონტრასტი: შავი ფონი, თეთრი ტექსტი, ყვითელი ბმულები */
+html.a11y-contrast body,
+html.a11y-contrast body :where(*:not(img, video, iframe)) {
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html.a11y-contrast body a,
+html.a11y-contrast body a * {
+  color: #ffff00 !important;
+}
+
+html.a11y-contrast img {
+  filter: none !important;
+}
+
+/* მუქი ხატულები შავ ფონზე → თეთრი */
+html.a11y-contrast .access-option img,
+html.a11y-contrast .project-page-switcher img,
+html.a11y-contrast .container-project-page-switcher img {
+  filter: invert(1) !important;
+}
+
+html.a11y-contrast .access-option[aria-pressed="true"] {
+  outline: 3px solid #ffff00;
+  outline-offset: -3px;
+}
+
+/* ხმოვანი რეჟიმი: ელემენტი, რომელიც ახლა იკითხება */
+.a11y-reading {
+  outline: 2px dashed green;
+  outline-offset: 3px;
+}
+
+html.a11y-contrast .a11y-reading {
+  outline-color: #ffff00 !important;
+}
+
+/* ხმოვანი რეჟიმის შეტყობინება (მითითებები, შეცდომები) */
+.voice-toast {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 50;
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: var(--green-900);
+  color: #ffffff;
+  font-family: notosansGeorgia;
+  font-size: 13px;
+  line-height: 18px;
+  box-shadow: 0 6px 18px rgba(13, 58, 20, 0.25);
+}
+
+.voice-toast[hidden] {
+  display: none;
+}
+
+/* განლაგება: გაშლილი ტექსტი (WCAG 1.4.12) */
+html.a11y-spacing main *,
+html.a11y-spacing footer * {
+  line-height: 1.8 !important;
+  letter-spacing: 0.08em !important;
+  word-spacing: 0.16em !important;
+}
+
+html.a11y-spacing main p {
+  margin-bottom: 1.5em !important;
+}
+
+/* ფიქსირებული სიმაღლის ბლოკები, სადაც გაშლილი ტექსტი არ დაეტეოდა */
+html.a11y-spacing .container-policy-issues-grid,
+html.a11y-spacing .learnmore,
+html.a11y-spacing .other-countries {
+  height: auto !important;
+  min-height: 0;
 }
 
 /* footer */

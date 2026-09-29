@@ -53,8 +53,8 @@
            </a>
 
        </div>
-       <button type="button" class="access-Btn">
-           <img src="./images/Frame 2022.png" alt="img not found">
+       <button type="button" class="access-Btn" aria-label="თავსებადობის მენიუ" aria-controls="accessMenu" aria-expanded="false">
+           <img src="./images/Frame 2022.png" alt="">
        </button>
       
    
@@ -117,42 +117,36 @@
       </div>
 
 
-   <div class="access-overlay hidden">
+   <div class="access-overlay hidden" id="accessMenu" role="dialog" aria-labelledby="accessMenuTitle">
+     <div class="head">
+       <h2 id="accessMenuTitle">თავსებადობის მენიუ</h2>
+       <button type="button" class="close-btn" aria-label="დახურვა"><img src="./images/close.png" alt=""></button>
+     </div>
 
-       <div class="head">
-           <h1>თავსებადობის მენიუ</h1>
-           <button class="close-btn"><img src="./images/close.png" alt="not found"></button>
-       </div>
+     <div class="access-menu">
+       <button type="button" class="access-option" data-action="voice" aria-pressed="false">
+         <img src="./images/Voice.png" alt="">
+         <span>ხმოვანი რეჟიმი</span>
+       </button>
+       <button type="button" class="access-option" data-action="font" aria-pressed="false">
+         <img src="./images/font.png" alt="">
+         <span>შრიფტი</span>
+       </button>
+       <button type="button" class="access-option" data-action="contrast" aria-pressed="false">
+         <img src="./images/Contrast.png" alt="">
+         <span>კონტრასტი</span>
+       </button>
+       <button type="button" class="access-option" data-action="spacing" aria-pressed="false">
+         <img src="./images/Location.png" alt="">
+         <span>განლაგება</span>
+       </button>
+       <button type="button" class="access-option" data-action="reset">
+         <img src="./images/reload.png" alt="">
+         <span>გასუფთავება</span>
+       </button>
+     </div>
 
-       <div class="access-menu">
-
-         <div class="button-voice">
-           <button><img src="./images/Voice.png" alt="not found"></button>
-           <p>ხმოვანი რეჟიმი</p>
-         </div>
-         
-         <div class="button-voice">
-           <button><img src="./images/font.png" alt="not found"></button>
-           <p>შრიფტი</p>
-         </div>
-
-         <div class="button-voice">
-           <button><img src="./images/Contrast.png" alt="not found"></button>
-           <p>კონტრასტი</p>
-         </div>
-
-         <div class="button-voice">
-           <button><img src="./images/Location.png" alt="not found"></button>
-           <p>განლაგება</p>
-         </div>
-
-         <div class="button-other" >
-           <button><img src="./images/reload.png" alt="not found"></button>
-           <p>კონტრასტი</p>
-         </div>
-
-       </div>
-      
+     <p class="access-status" role="status" aria-live="polite"></p>
    </div>
 
    <div class="searchforhid" id="searchFoor">
@@ -497,5 +491,6 @@
   <script src="./topscroll.js"></script>
    <script src="./apppolicy.js"></script>
     <script src="./app.js"></script>
+    <script src="./accessibility.js"></script>
 </body>
 </html>
