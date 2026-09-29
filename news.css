@@ -33,12 +33,13 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #ffff;
+  color: var(--green-900);
 }
 
 .page-title img {
   width: 5px;
   height: 8px;
+  filter: brightness(0) invert(16%) sepia(35%) saturate(900%) hue-rotate(85deg) brightness(90%);
 }
 
 .projects-news {
@@ -71,7 +72,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 33px;
-  color: #062036;
+  color: var(--green-900);
   margin-bottom: 24px;
 }
 
@@ -114,7 +115,7 @@
 
 .project-news-text a:hover {
   text-decoration: underline;
-  color: rgb(130, 130, 255);
+  color: green;
 }
 
 .project-news-date {
@@ -152,7 +153,7 @@
 .page-switcher-activee {
   padding: 1px 5px;
   color: #fff;
-  background-color: #062136;
+  background-color: green;
   border-radius: 4px;
 }
 

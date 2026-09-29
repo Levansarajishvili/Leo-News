@@ -56,7 +56,7 @@
   line-height: 22px;
   text-decoration: none;
   padding: 7px 20px;
-  background-color: #c1a783;
-  color: #2e2e2e;
+  background-color: yellowgreen;
+  color: var(--green-900);
   margin-bottom: 27px;
 }

@@ -33,16 +33,17 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #fff;
+  color: var(--green-900);
 }
 
 .page-title img {
   width: 5px;
   height: 8px;
+  filter: brightness(0) invert(16%) sepia(35%) saturate(900%) hue-rotate(85deg) brightness(90%);
 }
 
 .about-menu-header-title {
-  border-left: 1px solid #ffff;
+  border-left: 1px solid var(--green-900);
   margin-left: 170px;
   padding-left: 30px;
 }
@@ -78,7 +79,7 @@
   font-size: 24px;
   line-height: 33px;
   text-transform: uppercase;
-  color: #ffff;
+  color: var(--green-900);
   margin: 16px 0;
 }
 

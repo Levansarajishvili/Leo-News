@@ -33,12 +33,13 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #ffff;
+  color: var(--green-900);
 }
 
 .page-title img {
   width: 5px;
   height: 8px;
+  filter: brightness(0) invert(16%) sepia(35%) saturate(900%) hue-rotate(85deg) brightness(90%);
 }
 
 .news-page-news {
@@ -87,7 +88,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 33px;
-  color: #062036;
+  color: var(--green-900);
   margin-bottom: 24px;
 }
 
@@ -133,7 +134,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
-  color: #09304d;
+  color: var(--green-700);
   text-decoration: none;
 }
 
@@ -170,7 +171,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 33px;
-  color: #062036;
+  color: var(--green-900);
   margin-bottom: 24px;
 }
 
@@ -274,7 +275,7 @@
 }
 
 .days li.activeeee::before {
-  background: rgb(112, 112, 243);
+  background: green;
 }
 
 /* project page switcher */
@@ -302,7 +303,7 @@
 .page-switcher-activee {
   padding: 1px 5px;
   color: #fff;
-  background-color: #062136;
+  background-color: green;
   border-radius: 4px;
 }
 

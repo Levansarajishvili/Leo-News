@@ -39,17 +39,18 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #ffff;
+  color: var(--green-900);
 }
 
 .page-title img {
   width: 5px;
   height: 8px;
+  filter: brightness(0) invert(16%) sepia(35%) saturate(900%) hue-rotate(85deg) brightness(90%);
   /* margin: 0 10px 0 10px; */
 }
 
 .about-menu-header-title {
-  border-left: 1px solid #ffff;
+  border-left: 1px solid var(--green-900);
   margin-left: 170px;
   padding-left: 30px;
 }
@@ -67,7 +68,7 @@
   font-size: 24px;
   line-height: 32px;
   text-transform: uppercase;
-  color: #ffff;
+  color: var(--green-900);
   margin: 16px 0;
 }
 
@@ -84,7 +85,7 @@
   font-size: 14px;
   line-height: 19px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--green-900);
   margin-bottom: 16px;
 }
 
@@ -401,12 +402,12 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  color: #174e5e;
+  color: var(--green-700);
   text-decoration: none;
 }
 
 .about-news-grid-news-text h1 a:hover {
-  color: rgb(192, 192, 255);
+  color: green;
   text-decoration: underline;
 }
 
@@ -416,13 +417,13 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
-  color: #174e5e;
+  color: var(--green-700);
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .about-news-grid-news-text a:hover {
-  color: rgb(192, 192, 255);
+  color: green;
   text-decoration: underline;
 }
 

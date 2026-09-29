@@ -8,8 +8,8 @@
   background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.75) 0%,
-      rgba(3, 3, 6, 0.59182) 32.94%,
-      rgba(12, 16, 27, 0) 100%
+      rgba(9, 40, 14, 0.62) 32.94%,
+      rgba(9, 40, 14, 0) 100%
     ),
     url(./images/municipalitynewss.png);
   background-size: cover;
@@ -228,7 +228,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 33px;
-  color: #0a314e;
+  color: var(--green-900);
   text-transform: uppercase;
   margin-top: 10px;
 }
@@ -236,7 +236,7 @@
 .news-head-line {
   width: 68px;
   height: 0;
-  border: 2px solid #c1a784;
+  border: 2px solid yellowgreen;
   margin-top: 7px;
   margin-bottom: 40px;
 }
@@ -270,7 +270,7 @@
   line-height: 22px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #0a314e;
+  color: var(--green-900);
 }
 
 .main-grid-news h1 a:hover {
@@ -301,7 +301,7 @@
 .main-grid-news-date-line {
   width: 24px;
   height: 0;
-  border: 1px solid #c1a784;
+  border: 1px solid yellowgreen;
   margin-right: 10px;
 }
 
@@ -373,8 +373,8 @@
   font-size: 14px;
   line-height: 19px;
   text-transform: uppercase;
-  color: #0a314e;
-  background-color: #c1a783;
+  color: var(--green-900);
+  background-color: yellowgreen;
   border: none;
   width: 126px;
   height: 39px;
@@ -398,17 +398,17 @@
 .subscribe-news-socials a {
   font-size: 22px;
   font-weight: 500;
-  color: #0a314e;
+  color: var(--green-900);
   text-decoration: none;
   margin-right: 16px;
 }
 
 .subscribe-news-socials a:hover {
-  color: rgb(192, 192, 255);
+  color: green;
 }
 
 .subscribe-news-socials a img:hover {
-  color: rgb(192, 192, 255);
+  color: green;
 }
 
 /* foreign policy */
@@ -416,7 +416,7 @@
 .foreign-policy {
   width: 100%;
   height: 594px;
-  background-color: rgb(6, 214, 6);
+  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -540,7 +540,8 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 739px;
-  background-color: #0a314e;
+  background-color: var(--green-900);
+  background-blend-mode: luminosity; /* რუკის ფოტოს ლურჯი ტონი → მუქი მწვანე */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -686,7 +687,7 @@
 }
 
 .other-countries-body-image a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 .other-countries-body-image img {
@@ -787,7 +788,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  color: #174e5e;
+  color: var(--green-700);
   line-height: 22px;
   text-transform: uppercase;
   text-decoration: none;
@@ -796,14 +797,14 @@
 }
 
 .infolist-grid-news a:hover {
-  color: rgb(192, 192, 255);
+  color: green;
 }
 /* ukraine-case */
 
 .ukraine-case {
   width: 100%;
   height: 489px;
-  background-color: rgb(11, 145, 11);
+  background-color: var(--green-700);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -941,7 +942,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 33px;
-  color: #0a314e;
+  color: var(--green-900);
   text-transform: uppercase;
   margin-top: 10px;
 }
@@ -949,7 +950,7 @@
 .news-head-line {
   width: 68px;
   height: 0;
-  border: 2px solid #c1a784;
+  border: 2px solid yellowgreen;
   margin-top: 7px;
   margin-bottom: 40px;
 }
@@ -979,7 +980,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #0a314e;
+  color: var(--green-900);
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -1024,7 +1025,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  color: #174e5e;
+  color: var(--green-700);
   line-height: 22px;
   text-transform: uppercase;
   text-decoration: none;
@@ -1034,7 +1035,7 @@
 }
 
 .policy-grid-news a:hover {
-  color: rgb(192, 192, 255);
+  color: green;
 }
 
 .policy-issues-grid-newslist {
@@ -1047,14 +1048,14 @@
   padding-bottom: 24px;
 }
 /* .ui-state-active {
-  background: red;
+  background: green;
 } */
 #tabs ul li {
   position: relative;
   height: 40px;
 }
 #tabs ul li.ui-state-active a::after {
-  border-bottom: 2px solid #c1a783;
+  border-bottom: 2px solid green;
   bottom: 0;
   content: "";
   display: block;
@@ -1103,7 +1104,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #0a314e;
+  color: var(--green-900);
   text-transform: uppercase;
   text-decoration: none;
   margin-bottom: 0;
@@ -1139,7 +1140,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  color: #174e5e;
+  color: var(--green-700);
   line-height: 22px;
   text-transform: uppercase;
   text-decoration: none;
@@ -1203,7 +1204,7 @@
 .learnmore {
   width: 100%;
   height: 272px;
-  background-color: greenyellow;
+  background-color: yellowgreen;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1220,7 +1221,7 @@
   }
 
   .learnmore-news {
-    border-right: #0a314e;
+    border-right: var(--green-900);
   }
 }
 
@@ -1233,7 +1234,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  color: #ffff;
+  color: var(--green-900);
   line-height: 25px;
   text-transform: uppercase;
   margin-bottom: 26px;
@@ -1263,7 +1264,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #ffff;
+  color: var(--green-900);
   margin-bottom: 12px;
 }
 
@@ -1273,7 +1274,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
-  color: #ffff;
+  color: var(--green-900);
   margin-bottom: 12px;
 }
 
@@ -1284,6 +1285,6 @@
 }
 
 .learnmore-news-text h2 a:hover {
-  color: #97afc261;
+  color: var(--green-700);
   transition: 1s;
 }

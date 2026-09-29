@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+/* ფერთა სისტემა — დომინანტი: green + yellowgreen */
+:root {
+  --green-900: #0d3a14; /* მუქი სექციები, სათაურები, ტექსტი yellowgreen-ზე */
+  --green-700: #045e04; /* ბმულები ღია ფონზე, მეორეხარისხოვანი სექცია */
+  --sand: #e0cfa9;      /* აქტიური მენიუ green ფონზე */
+  --tint: #eaf5d0;      /* hover green / მუქ ფონზე */
+}
+
 /* header */
 
 header {
@@ -81,7 +89,7 @@ header {
 }
 
 .active {
-  border-bottom: 1px solid rgb(210, 3, 3);
+  border-bottom: 2px solid var(--sand);
 }
 
 .nav-utility-content-menu ul a:hover {
@@ -100,7 +108,7 @@ header {
 }
 
 .nav-utility-content button:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 .socials {
@@ -116,11 +124,11 @@ header {
 }
 
 .socials a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 .socials a img:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 .lang {
@@ -129,7 +137,7 @@ header {
 }
 
 /* .nav-utility-content .access-Btn:hover {
-  background-color: rgb(192, 192, 255);
+  background-color: var(--tint);
 } */
 
 /* secont-nav-utility-content */
@@ -159,7 +167,7 @@ header {
   font-weight: 500;
   font-size: 14px;
   margin-left: 10px;
-  color: #ffff;
+  color: var(--green-900);
   line-height: 12px;
   text-transform: uppercase;
   /* transform: translateX(-80px); */
@@ -189,7 +197,7 @@ header {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #ffff;
+  color: var(--green-900);
   line-height: 19px;
   text-decoration: none;
   margin-right: 16px;
@@ -198,7 +206,7 @@ header {
 }
 
 .secont-nav-utility-content nav ul a:hover {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--green-900);
   transition: 2s;
 }
 
@@ -213,6 +221,7 @@ header {
 .secont-nav-utility-content button img {
   width: 14px;
   height: 14px;
+  filter: brightness(0) invert(16%) sepia(35%) saturate(900%) hue-rotate(85deg) brightness(90%);
 }
 
 /* searchforbutton */
@@ -344,7 +353,7 @@ header {
   right: 0;
   width: 100%;
   /* height: auto; */
-  background-color: #0a2b43;
+  background-color: var(--green-900);
   display: flex;
   justify-content: center;
   padding: 24px 5%;
@@ -425,7 +434,7 @@ header {
 }
 
 .aboutus .menuItem a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 /* responsability */
@@ -436,7 +445,7 @@ header {
   right: 0;
   width: 100%;
   /* height: auto; */
-  background-color: #0a2b43;
+  background-color: var(--green-900);
   display: flex;
   justify-content: center;
   padding: 24px 5%;
@@ -477,7 +486,7 @@ header {
 }
 
 .responsability .menuItem a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 /* training center */
@@ -488,7 +497,7 @@ header {
   right: 0;
   width: 100%;
   height: auto;
-  background-color: #0a2b43;
+  background-color: var(--green-900);
   display: flex;
   justify-content: center;
   padding: 24px 5%;
@@ -529,7 +538,7 @@ header {
 }
 
 .trainingcenter .menuItem a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 /* academic council */
@@ -540,7 +549,7 @@ header {
   right: 0;
   width: 100%;
   height: auto;
-  background-color: #0a2b43;
+  background-color: var(--green-900);
   display: flex;
   justify-content: center;
   padding: 24px 5%;
@@ -581,7 +590,7 @@ header {
 }
 
 .academiccouncil .menuItem a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 /* legislation */
@@ -592,7 +601,7 @@ header {
   right: 0;
   width: 100%;
   height: auto;
-  background-color: #0a2b43;
+  background-color: var(--green-900);
   display: flex;
   justify-content: center;
   padding: 24px 5%;
@@ -633,7 +642,7 @@ header {
 }
 
 .legislation .menuItem a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 /* News */
@@ -663,7 +672,7 @@ header {
   font-weight: 900;
   font-size: 24px;
   line-height: 19px;
-  color: #ffff;
+  color: var(--green-900);
   margin-right: 3rem;
 }
 
@@ -723,12 +732,13 @@ header {
   font-size: 14px;
   line-height: 19px;
   text-decoration: none;
-  color: #ffff;
+  color: var(--green-900);
   margin-bottom: 28px;
 }
 
 .news .menuItem a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--green-700);
+  text-decoration: underline;
 }
 
 /* Public info */
@@ -739,7 +749,7 @@ header {
   right: 0;
   width: 100%;
   height: auto;
-  background-color: #0a2b43;
+  background-color: var(--green-900);
   display: flex;
   justify-content: center;
   padding: 24px 5%;
@@ -780,7 +790,7 @@ header {
 }
 
 .publicinfo .menuItem a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 /* internationalcoop */
@@ -791,7 +801,7 @@ header {
   right: 0;
   width: 100%;
   height: auto;
-  background-color: #0a2b43;
+  background-color: var(--green-900);
   display: flex;
   justify-content: center;
   padding: 24px 5%;
@@ -832,11 +842,11 @@ header {
 }
 
 .internationalcoop .menuItem a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 /* .secont-nav-utility-content nav ul a:focus {
-  background-color: #1e6ea6;
+  background-color: var(--green-700);
 } */
 
 /* mobile-tablet header  */
@@ -1078,7 +1088,7 @@ header {
 }
 
 /* .footer-primary-wrapper nav ul a:focus {
-  background-color: #1e6ea6;
+  background-color: var(--green-700);
 } */
 
 .footer-secondary-wrapper {
@@ -1136,7 +1146,7 @@ header {
 } */
 
 /* .footer-secondary-wrapper nav ul a:focus {
-  background-color: #1e6ea6;
+  background-color: var(--green-700);
 } */
 
 .hidden {
@@ -1236,7 +1246,7 @@ header {
 }
 
 .mobile-tabletfooter-socials a:hover {
-  color: rgb(192, 192, 255);
+  color: var(--tint);
 }
 
 .mobile-tabletfooter-secondnav {
