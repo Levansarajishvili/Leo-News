@@ -9,15 +9,6 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="./fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
-    <script src="./jquery 3.6.0.js"></script>
-    <script src="./jquery-ui.js"></script>
-    <script>
-      $(function () {
-        $("#tabs").tabs();
-      });
-    </script>
 </head>
 <body>
 
@@ -427,24 +418,18 @@
             
                 <div class="container-policy-issues-grid">
                    <div class="policy-issues-grid-header">
-                    <div id="tabs">
+                    <div id="tabs" class="about">
                     <ul >
 
-                        <li><a href="#tabs-1">
-                            ლტოლვილები და ჰუმანიტარული დახმარება 
-                        </a></li>
+                        <li><button type="button" class="tab-btn active" data-id="tabs-1">ლტოლვილები და ჰუმანიტარული დახმარება</button></li>
 
-                        <li><a href="#tabs-2">
-                            კლიმატი და გარემო
-                        </a></li>
+                        <li><button type="button" class="tab-btn" data-id="tabs-2">კლიმატი და გარემო</button></li>
 
-                        <li><a href="#tabs-3">
-                            გლობალური ჯანმრთელობა 
-                        </a></li>
+                        <li><button type="button" class="tab-btn" data-id="tabs-3">გლობალური ჯანმრთელობა</button></li>
                     </ul>
                    
 
-                   <div class="policy-issues-grid-body" id="tabs-1">
+                   <div class="policy-issues-grid-body content active" id="tabs-1">
                     <div class="policy-issues-grid-img">
                         <img src="./images/policyissue.png" alt="not found">
                         <div class="policy-issues-grid-news">
@@ -491,7 +476,7 @@
                         </div>
                     </div>
                    </div>
-                   <div class="policy-issues-grid-body" id="tabs-2">
+                   <div class="policy-issues-grid-body content" id="tabs-2">
                     <div class="policy-issues-grid-img">
                         <img src="./images/official1.png" alt="not found">
                         <div class="policy-issues-grid-news">
@@ -538,7 +523,7 @@
                         </div>
                     </div>
                    </div>
-                   <div class="policy-issues-grid-body" id="tabs-3">
+                   <div class="policy-issues-grid-body content" id="tabs-3">
                     <div class="policy-issues-grid-img">
                         <img src="./images/official2.png" alt="not found">
                         <div class="policy-issues-grid-news">
@@ -870,5 +855,6 @@
     <script src="./topscroll.js"></script>
     <script src="./app.js"></script>
     <script src="./apppolicy.js"></script>
+    <script src="./tabs.js"></script>
 </body>
 </html>
