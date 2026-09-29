@@ -61,7 +61,7 @@
     const PHRASE_ON = "აქტივირებულია ხმოვანი რეჟიმი";
     const PHRASE_OFF = "ხმოვანი რეჟიმი გამორთულია";
     const TARGETS =
-      "a, button, p, h1, h2, h3, h4, h5, h6, li, td, th, label, figcaption, blockquote, [class*='date']";
+      "a, button, p, h1, h2, h3, h4, h5, h6, li, td, th, span, label, figcaption, blockquote, [class*='date']";
 
     class ServiceError extends Error {}
 
