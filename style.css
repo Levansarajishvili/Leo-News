@@ -5,6 +5,10 @@
 }
 
 /* ფერთა სისტემა — დომინანტი: green + yellowgreen */
+body {
+  overflow-wrap: break-word;
+}
+
 :root {
   --green-900: #0d3a14; /* მუქი სექციები, სათაურები, ტექსტი yellowgreen-ზე */
   --green-700: #045e04; /* ბმულები ღია ფონზე, მეორეხარისხოვანი სექცია */
@@ -915,20 +919,111 @@ header {
   height: 4rem;
 } */
 
+/* ბურგერ მენიუ — სამი ხაზი CSS-ით; გახსნისას X-ად იქცევა */
+.container-mobile-tabletheader .burger {
+  width: 40px;
+  height: 40px;
+  margin-left: -10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.burger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.burger[aria-expanded="true"] .burger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger[aria-expanded="true"] .burger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .burger-line {
+    transition: none;
+  }
+}
+
+/* მარჯვენა მხარე: თავსებადობის მენიუ + ძიება */
+.mobile-tabletheader-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: -10px;
+}
+
+.container-mobile-tabletheader .mobile-tabletheader-actions button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.mobile-tabletheader-actions img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.container-mobile-tabletheader button:focus-visible {
+  outline: 2px solid var(--tint);
+  outline-offset: 0;
+}
+
+/* მობილური მენიუ და ძიება — JS კლასით იხსნება */
+#mobileMenu.is-open,
+#mobSearchFoor.is-open,
+#searchFoor.is-open {
+  display: block;
+}
+
 
 
 /* access — თავსებადობის მენიუ */
 
 .access-overlay {
-  width: 352px;
-  transform: translateY(-65px);
-  position: relative;
-  left: 68%;
-  z-index: 20;
+  position: fixed;
+  top: 74px;
+  /* desktop-ზე იქვე, სადაც აქამდე იყო; ვიწრო ეკრანზე მარჯვენა კიდიდან 16px */
+  right: max(16px, calc(32% - 352px));
+  width: min(352px, calc(100vw - 32px));
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  z-index: 100;
   border-radius: 12px;
   border: 1px solid #e3e3e3;
   background-color: #ffffff;
   box-shadow: 0 8px 24px rgba(13, 58, 20, 0.18);
+}
+
+@media screen and (max-width: 995px) {
+  .access-overlay {
+    top: 70px; /* მობილური ჰედერის ქვემოთ */
+    right: 16px;
+  }
 }
 
 .access-overlay .head {
@@ -1056,6 +1151,10 @@ html.a11y-contrast body a * {
 
 html.a11y-contrast img {
   filter: none !important;
+}
+
+html.a11y-contrast .burger-line {
+  background-color: #ffffff !important;
 }
 
 /* მუქი ხატულები შავ ფონზე → თეთრი */
@@ -1377,17 +1476,26 @@ html.a11y-spacing .other-countries {
   height: 50px;
   display: none;
   position: fixed;
-  bottom: 40px;
-  right: 10px;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  right: max(16px, env(safe-area-inset-right));
   z-index: 99;
-  font-size: 18px;
+  padding: 0;
   border: none;
-  outline: none;
-  background-color: #ffff;
-  color: white;
+  background-color: #ffffff;
   cursor: pointer;
-  /* padding: 15px; */
   border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(13, 58, 20, 0.2);
 }
 
+#myTopScrollBtn:focus-visible {
+  outline: 2px solid green;
+  outline-offset: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  #myTopScrollBtn {
+    width: 44px;
+    height: 44px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+  }
 }

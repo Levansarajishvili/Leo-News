@@ -1317,3 +1317,149 @@
   color: var(--green-700);
   transition: 1s;
 }
+
+/* ================= რესპონსივი: ფიქსირებული სიგანეები → ეკრანზე მორგებადი ================= */
+
+/* hero სათაური და ტექსტი */
+@media screen and (max-width: 585px) {
+  .coverabout-text h1,
+  .coverabout-text p {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+/* „ჯანმრთელობა და ჯანსაღი ცხოვრების წესი“ */
+@media screen and (max-width: 995px) {
+  .foreign-policy-imagetext img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-left: 0;
+  }
+
+  .foreign-policy-text {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .foreign-policy-text p {
+    width: auto;
+    padding-left: 0;
+  }
+}
+
+/* „ქვეყნები“ */
+@media screen and (max-width: 995px) {
+  .other-countries-body-image {
+    width: 100%;
+    max-width: 556px;
+    margin-right: 0;
+  }
+
+  .other-countries-body-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 556 / 292;
+    object-fit: cover;
+  }
+
+  .other-countries-body-image a {
+    width: auto;
+  }
+}
+
+/* hero: 498px / 520px მაქსიმუმია და არა სავალდებულო სიგანე */
+.coverabout-text h1,
+.coverabout-text p {
+  max-width: 100%;
+}
+
+/* „ქვეყნები“ 1100px-მდე: სურათი 556px-მდე, მაგრამ იკუმშება, თუ ადგილი არ არის
+   (დიდ ეკრანზე განლაგება უცვლელია) */
+@media screen and (max-width: 1100px) {
+  .other-countries-body-image {
+    flex: 0 1 556px;
+    min-width: 0;
+  }
+
+  .other-countries-body-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 556 / 292;
+    object-fit: cover;
+  }
+
+  .other-countries-body-infolist {
+    min-width: 0;
+  }
+}
+
+/* თარიღები: 250px-ზე განიერი არასოდეს, მაგრამ ვიწრო ეკრანზე იკუმშება */
+.coverabout-date,
+.other-countries-body-date {
+  max-width: 100%;
+}
+
+/* „გაიგე მეტი“ ბარათები: იკუმშება და ტექსტი ახალ ხაზზე გადადის */
+.learnmore-news {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.learnmore-news-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* „უკრაინა“ ტაბლეტზე (751–1100px): ტექსტი და ვიდეო გვერდიგვერდ; ვიდეო 500px-მდე, მოქნილი სიგანით */
+@media screen and (min-width: 751px) and (max-width: 1100px) {
+  .container-ukraine-case {
+    align-items: center;
+    gap: 32px;
+  }
+
+  .ukraine-case-text {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .ukraine-case-video {
+    flex: 0 1 500px;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .ukraine-case-video iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 500 / 272;
+    margin: 0;
+  }
+}
+
+/* „უკრაინა“ — ვიდეო ეკრანის სიგანეზე, 16:9 */
+@media screen and (max-width: 750px) {
+  .ukraine-case {
+    padding: 50px 0;
+  }
+
+  .ukraine-case-text,
+  .ukraine-case-video {
+    width: 100%;
+    padding: 0;
+  }
+
+  .ukraine-case-video iframe {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 32px 0 0;
+  }
+}

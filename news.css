@@ -161,3 +161,10 @@
   border: none;
   background-color: #ffff;
 }
+
+/* გვერდების გადამრთველი: 10% სიგანე ტელეფონზე ~32px-ია — ზომა შიგთავსის მიხედვით */
+.container-project-page-switcher {
+  width: auto;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}

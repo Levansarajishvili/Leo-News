@@ -311,3 +311,22 @@
   border: none;
   background-color: #ffff;
 }
+
+/* კალენდრის ზედა ზოლი ვიწრო ეკრანზე */
+@media screen and (max-width: 480px) {
+  .wrapper .header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .wrapper .header input {
+    margin-left: 0;
+  }
+}
+
+/* გვერდების გადამრთველი: 10% სიგანე ტელეფონზე ~32px-ია — ზომა შიგთავსის მიხედვით */
+.container-project-page-switcher {
+  width: auto;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}

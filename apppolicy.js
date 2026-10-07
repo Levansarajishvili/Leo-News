@@ -17,30 +17,47 @@ questions.forEach(function (question) {
 });
 
 
+// ---------- ჩამოსაშლელი პანელები (ძიება, მობილური მენიუ) ----------
+// პანელი იხსნება/იხურება კლასით "is-open"; ღილაკის aria-expanded ბურგერის X-ანიმაციასაც მართავს.
+
+const MOBILE_PANELS = ["mobileMenu", "mobSearchFoor"];
+
+function setPanel(id, open) {
+    const panel = document.getElementById(id);
+    if (!panel) return;
+    panel.classList.toggle("is-open", open);
+    document.querySelectorAll('[aria-controls="' + id + '"]').forEach(function (btn) {
+        btn.setAttribute("aria-expanded", open);
+    });
+}
+
+function togglePanel(id, group) {
+    const panel = document.getElementById(id);
+    if (!panel) return;
+    const open = !panel.classList.contains("is-open");
+    // ერთდროულად ერთი პანელი: მენიუს გახსნა ძიებას ხურავს და პირიქით
+    (group || []).forEach(function (other) {
+        if (other !== id) setPanel(other, false);
+    });
+    setPanel(id, open);
+}
+
 function mySearchFunct() {
-    let searCh = document.getElementById("searchFoor");
-    if (searCh.style.display === "none") {
-        searCh.style.display = "block";
-    } else {
-        searCh.style.display = "none";
-    }
-  }
+    togglePanel("searchFoor");
+}
 
-  function mobSearchFunct() {
-    let mobsearCh = document.getElementById("mobSearchFoor");
-    if (mobsearCh.style.display === "none") {
-        mobsearCh.style.display = "block";
-    } else {
-        mobsearCh.style.display = "none";
-    }
-  }
+function mobSearchFunct() {
+    togglePanel("mobSearchFoor", MOBILE_PANELS);
+}
 
+function mobMenuFunct() {
+    togglePanel("mobileMenu", MOBILE_PANELS);
+}
 
-  function mobMenuFunct() {
-    let mobMenu = document.getElementById("mobileMenu");
-    if (mobMenu.style.display === "none") {
-        mobMenu.style.display = "block";
-    } else {
-        mobMenu.style.display = "none";
-    }
-  }
+// Esc ხურავს ღია პანელს
+document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    MOBILE_PANELS.concat("searchFoor").forEach(function (id) {
+        setPanel(id, false);
+    });
+});

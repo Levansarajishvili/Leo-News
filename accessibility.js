@@ -9,9 +9,10 @@
   const DEFAULTS = { voice: false, fontStep: 0, contrast: false, spacing: false };
 
   const root = document.documentElement;
-  const openBtn = document.querySelector(".access-Btn");
+  // გამხსნელი ღილაკი ორია: desktop ჰედერში და მობილურ/ტაბლეტის ჰედერში
+  const openBtns = Array.from(document.querySelectorAll(".access-Btn"));
   const menu = document.querySelector(".access-overlay");
-  if (!openBtn || !menu) return;
+  if (!openBtns.length || !menu) return;
 
   const closeBtn = menu.querySelector(".close-btn");
   const status = menu.querySelector(".access-status");
@@ -448,23 +449,48 @@
   });
 
   // ================= მენიუს გახსნა / დახურვა =================
-  function openMenu() {
+  let lastOpener = openBtns[0]; // დახურვისას ფოკუსი იმ ღილაკს უბრუნდება, რომლითაც გაიხსნა
+
+  function setExpanded(isOpen) {
+    openBtns.forEach(function (btn) {
+      btn.setAttribute("aria-expanded", isOpen);
+    });
+  }
+
+  function isOpener(target) {
+    return openBtns.some(function (btn) {
+      return btn.contains(target);
+    });
+  }
+
+  // მობილურ/ტაბლეტზე მენიუ ჰედერის ქვემოთ ჩნდება (ჰედერის სიმაღლე ბანერის გამო იცვლება);
+  // desktop-ზე პოზიციას CSS განსაზღვრავს
+  function placeMenu(opener) {
+    const header = opener && opener.closest(".mobile-tabletheader");
+    menu.style.top = header ? Math.max(8, header.getBoundingClientRect().bottom + 8) + "px" : "";
+  }
+
+  function openMenu(opener) {
+    lastOpener = opener || lastOpener;
+    placeMenu(opener);
     menu.classList.remove("hidden");
-    openBtn.setAttribute("aria-expanded", "true");
+    setExpanded(true);
     optionBtns[0].focus();
   }
 
   function closeMenu() {
     if (menu.classList.contains("hidden")) return;
     menu.classList.add("hidden");
-    openBtn.setAttribute("aria-expanded", "false");
+    setExpanded(false);
     announce("");
-    openBtn.focus();
+    lastOpener.focus();
   }
 
-  openBtn.addEventListener("click", function () {
-    if (menu.classList.contains("hidden")) openMenu();
-    else closeMenu();
+  openBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (menu.classList.contains("hidden")) openMenu(btn);
+      else closeMenu();
+    });
   });
 
   closeBtn.addEventListener("click", closeMenu);
@@ -477,9 +503,9 @@
 
   document.addEventListener("click", function (e) {
     if (menu.classList.contains("hidden")) return;
-    if (!menu.contains(e.target) && !openBtn.contains(e.target)) {
+    if (!menu.contains(e.target) && !isOpener(e.target)) {
       menu.classList.add("hidden");
-      openBtn.setAttribute("aria-expanded", "false");
+      setExpanded(false);
     }
   });
 

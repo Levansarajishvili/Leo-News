@@ -446,3 +446,8 @@
   border: 2px solid #47474765;
   margin-right: 15px;
 }
+
+/* მსგავსი სიახლეების ბარათები: გრძელი ტექსტი გადადის ახალ ხაზზე და ბარათი არ გადის ეკრანიდან */
+.container-about-news-grid-news {
+  min-width: 0;
+}
