@@ -1281,6 +1281,13 @@
   border-right: 1px solid rgba(219, 219, 219, 0.471);
 }
 
+@media screen and (max-width: 400px) {
+ .learnmore-news {
+  display: flex;
+  flex-direction: column;
+}
+}
+
 .learnmore-news img {
   width: 105px;
   height: 80px;
@@ -1338,6 +1345,18 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
     margin-left: 0;
+  }
+
+    .foreign-policy-text a{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  .foreign-policy-imagetext a img {
+    width: 20px;
+    height:auto;
+    object-fit:none;
   }
 
   .foreign-policy-text {
